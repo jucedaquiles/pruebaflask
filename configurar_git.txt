@@ -3,19 +3,33 @@ CONFIGURAR SSH GIT
 ssh-keygen -t ed25519 -C jucedaquiles@gmail.com
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
+
 #Hay que agregar el contenido de la clave publica a la cuenta de github
 #Ahora hacer un test de conexión 
+
 ssh -T git@github.com
-Hi jucedaquiles! You've successfully authenticated, but GitHub does not provide shell access.
+#Hi jucedaquiles! You've successfully authenticated, but GitHub does not provide shell access.
+
 #Aunque me da un fallo, creo que va bien la configuracion de acceso a github
 INICIAR GIT
 #Me voy al directorio del proyecto
 git init 
 git add .
 git commit -m "Mi primer commit repositorio"
+
 #Esto crea la rama remota (con el nombre origin) en git (Aun no se que es la rama)
 git remote add origin git@github.com:jucedaquiles/pruebaflask.git
+
 #ahora decimos cual es nuestra rama remota principal
 git push -u origin master
+
 #Ahora podemos ejecutar git Branch o git remote para comprobar todo
 # Y aparte hemos visto como se ha subido todo a git
+
+#Ahora para agregar podemos hacer un 
+git commit a
+#y un 
+git push
+
+
+
