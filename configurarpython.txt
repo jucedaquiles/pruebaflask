@@ -1,0 +1,11 @@
+#Instalar entorno virtual de python
+sudo apt-get install virtualenv
+#Creamos el entorno virtual pruebaflask
+virtualenv -p /usr/bin/python3 pruebaflask
+#Activamos el entorno virtual
+source pruebaflask/bin/activate
+#Instalamos flask
+pip install flask
+#Comprobamos la instalación
+flask –version
+
