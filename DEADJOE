@@ -1,0 +1,43 @@
+
+*** These modified files were found in JOE when it aborted on Mon Dec 13 04:45:33 2021
+*** JOE was aborted by UNIX signal 15
+
+*** File 'configurarpython.txt'
+#Instalar entorno virtual de python
+sudo apt-get install virtualenv
+
+#Creamos el entorno virtual pruebaflask
+virtualenv -p /usr/bin/python3 pruebaflask
+
+#Activamos el entorno virtual
+source pruebaflask/bin/activate
+
+#Instalamos flask
+pip install flask
+
+#Comprobamos la instalación
+flask –version
+
+#instalar conector para my sql. AL intentar otros conectores ha fallado la
+#instalacion
+pip install mysql-connector-python
+
+
+*** File '(Unnamed)'
+prueba.py
+prueba.py
+/home/wordpress/pruebaflask/.git/COMMIT_EDITMSG
+/home/wordpress/pruebaflask/.git/COMMIT_EDITMSG
+/home/wordpress/pruebaflask/.git/COMMIT_EDITMSG
+/home/wordpress/pruebaflask/.git/COMMIT_EDITMSG
+creardb.txt
+creardb.txt
+creardb.txt
+configurar
+configurarpython.txt
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

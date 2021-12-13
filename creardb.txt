@@ -1,0 +1,26 @@
+# crear la base de datos
+CREATE DATABASE pruebasflask;
+
+#Usarla
+USE pruebasflask;
+
+#Crear la tabla
+CREATE TABLE IF NOT EXISTS tareas (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  nombre_tarea varchar(50),
+  realizada boolean,
+  PRIMARY KEY (id)
+);
+
+#Insertar unas filas
+INSERT INTO tareas (nombre_tarea, realizada) VALUES ("Hacer aplicacion con python y flask", false);
+INSERT INTO tareas (nombre_tarea, realizada) VALUES ("Tambien hay que ver las platillas html", false);
+
+
+# crear usuario para acceder a esta base de datos
+CREATE USER 'usuario'@'localhost' IDENTIFIED BY 'Audid4t%';
+
+
+#dar permisos al usuario de superusuario 
+GRANT ALL PRIVILEGES ON * . * TO 'usuario'@'localhost';
+
