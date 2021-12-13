@@ -9,3 +9,11 @@ pip install flask
 #Comprobamos la instalación
 flask –version
 
+#Despues de varios intentos de instalar el conector de mysql y fallar, veo
+#que es interntet que va muy lento, pero al final lo consigo
+#esta instalacion me falla 
+#pip install MySQL-python
+
+#esta instalacion si me funciona
+pip install mysql-connector-python
+
