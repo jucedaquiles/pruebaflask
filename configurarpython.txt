@@ -17,3 +17,5 @@ flask –version
 #esta instalacion si me funciona
 pip install mysql-connector-python
 
+pip install Flask-WTF
+pip install email-validator
