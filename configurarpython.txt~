@@ -1,0 +1,19 @@
+#Instalar entorno virtual de python
+sudo apt-get install virtualenv
+#Creamos el entorno virtual pruebaflask
+virtualenv -p /usr/bin/python3 pruebaflask
+#Activamos el entorno virtual
+source pruebaflask/bin/activate
+#Instalamos flask
+pip install flask
+#Comprobamos la instalación
+flask –version
+
+#Despues de varios intentos de instalar el conector de mysql y fallar, veo
+#que es interntet que va muy lento, pero al final lo consigo
+#esta instalacion me falla 
+#pip install MySQL-python
+
+#esta instalacion si me funciona
+pip install mysql-connector-python
+
