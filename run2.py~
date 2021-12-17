@@ -5,9 +5,6 @@ app.config['SECRET_KEY'] = '7110c8ae51a4b5af97be6534caef90e4bb9bdcb3380af008f90b
 #Para evitar ataques CSRF
 
 posts = ['Joaquin', 'Paco']
-name=''
-email=''
-password=''
 
 @app.route("/")
 def index():

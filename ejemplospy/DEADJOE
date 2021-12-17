@@ -1,0 +1,55 @@
+
+*** These modified files were found in JOE when it aborted on Thu Dec 16 17:06:58 2021
+*** JOE was aborted because the terminal closed
+
+*** File 'equacion.py'
+ListaNumeros = [1,1,1]
+
+
+def entradaValores(abc): 
+   print ("Calculo de ecuacion de segundo grado con enteros ")
+   abc[0] = int(input ("Introduzca el a (a debe de ser > 0) :"))
+   Retorno = abc[0] != 0
+   if Retorno :
+      abc[1] = int(input ("Introduzca el b :"))
+      abc[2] = int(input ("Introduzca el c :"))
+   else :
+      print ("El valor de a no debe de ser cero")
+   return Retorno
+
+def CalculaRaiz (abc):
+   valor = abc[1]** - 4 * abc[0] *abc[1]
+   return valor
+   
+if entradaValores(ListaNumeros) :
+   raiz = CalculaRaiz(listaNumeros)
+   if raiz < 0
+      print ("No tiene solucion, salvo uso de numeros complejos")
+   else
+      x1 = (-ListaNumeros[1] + raiz ) / 2 * ListaNumeros[0]
+      x2 = (-ListaNumeros[1] - raiz ) / 2 * ListaNumeros[0]
+       
+
+
+
+*** File '(Unnamed)'
+d
+
+*** File '(Unnamed)'
+equacion.py
+equacion.py
+equacion.py
+equacion.py
+equacion.py
+equacion.py
+equacion.py
+equacion.py
+equacion.py
+equacion.py
+equacion.py
+
+*** File '* Startup Log *'
+Processing '/etc/joe/joerc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/joerc

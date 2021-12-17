@@ -1,0 +1,69 @@
+from flask import Flask, render_template, request, redirect, url_for
+import mysql.connector
+
+app = Flask(__name__)
+
+#mydb = mysql.connector.connect(
+#  host="localhost",
+#  user="usuario",
+#  password="Audid4t%",
+#  database="pruebasflask"
+#)
+
+def AbreBD() :
+    return (mysql.connector.connect( host='localhost', user= 'usuario', passwd='Audid4t%', db='pruebasflask' ))
+    
+def LeeDB(db, ini=1, filas=10) :
+    mycursor = db.cursor()
+    mycursor.execute("SELECT id, nombre_tarea FROM tareas ")
+    ListaTareas = mycursor.fetchall()
+    mycursor.close()
+    return ListaTareas
+
+def EscribeDB(db, fila) :
+    mycursor = db.cursor()
+    sql = "INSERT INTO tareas (nombre_tarea, realizada) VALUES (%s, %s)"
+    val = (fila, False)
+    mycursor.execute(sql, val)
+    mydb.commit()
+    mycursor.close()
+    return ListaTareas
+
+
+@app.route("/")
+def tareas():
+#    mycursor = mydb.cursor()
+#    mycursor.execute("SELECT id, nombre_tarea FROM tareas ")
+#    tareasInicial = mycursor.fetchall()
+#    mycursor.close()
+#    return render_template("lista.html", tareas=tareasInicial)
+    return render_template("lista.html", tareas=LeeDB(mydb)
+
+@app.route("/add")
+def add():
+    tarea = request.args.get('tarea')
+    EscribeDB(mydb, tarea)
+
+#    mycursor = mydb.cursor()
+#    sql = "INSERT INTO tareas (nombre_tarea, realizada) VALUES (%s, %s)"
+#    val = (tarea, False)
+#    mycursor.execute(sql, val)
+#    mydb.commit()
+#    mycursor.close()
+[B    return redirect(url_for('tareas'))
+
+@app.route("/delete/<int:tarea>")
+def delete(tarea):
+    mycursor = mydb.cursor()
+    sql = "DELETE FROM tareas WHERE id = %s "
+    
+    mycursor.execute(sql, (tarea,))
+    mydb.commit()
+    
+    mycursor.close()
+    return redirect(url_for('tareas'))
+
+mydb = AbreDB()
+
+if __name__ == '__main__':
+    app.run('0.0.0.0', 5000, debug=True)

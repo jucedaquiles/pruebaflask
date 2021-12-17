@@ -10,6 +10,10 @@ posts = ['Joaquin', 'Paco']
 def index():
     return render_template("index.html", num_posts=len(posts))
 
+@app.route("/lista")
+def lista():
+    return render_template("lista.html", lista=posts, nombre="Pepe")
+
 @app.route("/carpeta/<string:slug>/")
 def show_post(slug):
     return render_template("post_view.html", slug_title=posts[int(slug)])
